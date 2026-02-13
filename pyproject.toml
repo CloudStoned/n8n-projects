@@ -1,0 +1,13 @@
+[project]
+name = "n8n"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "elevenlabs>=2.35.0",
+    "fastapi>=0.129.0",
+    "python-dotenv>=1.2.1",
+    "python-multipart>=0.0.22",
+    "uvicorn>=0.40.0",
+]

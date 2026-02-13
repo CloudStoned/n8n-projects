@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Record → n8n Webhook → Play</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        margin: 24px;
+        max-width: 760px;
+      }
+      button {
+        padding: 10px 14px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+      .row {
+        margin: 12px 0;
+      }
+      .status {
+        padding: 10px;
+        background: #f6f6f6;
+        border-radius: 8px;
+        white-space: pre-wrap;
+      }
+      audio {
+        width: 100%;
+        margin-top: 8px;
+      }
+      .small {
+        color: #555;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Record → Server → n8n → Play</h1>
+
+    <div class="row">
+      <button id="startBtn">🎙️ Start recording</button>
+      <button id="stopBtn" disabled>⏹ Stop</button>
+      <button id="sendBtn" disabled>➡️ Send to server</button>
+    </div>
+
+    <div class="row">
+      <div class="small">Local recording preview</div>
+      <audio id="localPlayer" controls></audio>
+    </div>
+
+    <div class="row">
+      <div class="small">Response audio from n8n</div>
+      <audio id="remotePlayer" controls></audio>
+    </div>
+
+    <div class="row status" id="status">Idle.</div>
+
+    <script src="server.js"></script>
+  </body>
+</html>
