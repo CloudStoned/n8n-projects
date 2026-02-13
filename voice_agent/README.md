@@ -48,7 +48,7 @@ N8N_WEBHOOK_URL=http://localhost:5678/webhook-test/your-webhook-id
 3. Start server:
 
 ```bash
-uv py main.py
+uv run python main.py
 ```
 
 4. Open browser: `http://localhost:8000`
